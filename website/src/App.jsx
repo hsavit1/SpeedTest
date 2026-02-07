@@ -63,7 +63,7 @@ function Hero() {
         <p className="hero-note">Requires macOS 14 Sonoma or later</p>
       </div>
       <div className="hero-visual">
-        <WidgetPreview />
+        <img src="/screenshots/app.png" alt="Speed Test app showing 272 Mbps" className="hero-screenshot" />
       </div>
     </section>
   )
