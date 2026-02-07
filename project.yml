@@ -22,7 +22,6 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.speedtest.app
         INFOPLIST_FILE: SpeedTest/Info.plist
-        CODE_SIGN_ENTITLEMENTS: SpeedTest/SpeedTest.entitlements
         CODE_SIGN_IDENTITY: "-"
         CODE_SIGN_STYLE: Manual
         COMBINE_HIDPI_IMAGES: true
@@ -41,7 +40,6 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.speedtest.app.widget
         INFOPLIST_FILE: SpeedTestWidget/Info.plist
-        CODE_SIGN_ENTITLEMENTS: SpeedTestWidget/SpeedTestWidget.entitlements
         CODE_SIGN_IDENTITY: "-"
         CODE_SIGN_STYLE: Manual
         LD_RUNPATH_SEARCH_PATHS:
