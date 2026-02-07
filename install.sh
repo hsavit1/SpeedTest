@@ -4,7 +4,7 @@ set -e
 echo "Installing Speed Test..."
 
 WORKDIR=$(mktemp -d)
-ZIPURL="https://github.com/hsavit1/SpeedTest/releases/latest/download/SpeedTest-v1.0.0.zip"
+ZIPURL="https://github.com/hsavit1/SpeedTest/releases/latest/download/SpeedTest-v1.1.0.zip"
 
 curl -sL "$ZIPURL" -o "$WORKDIR/SpeedTest.zip"
 ditto -xk "$WORKDIR/SpeedTest.zip" "$WORKDIR"

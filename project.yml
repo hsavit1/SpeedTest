@@ -10,6 +10,9 @@ settings:
   base:
     SWIFT_VERSION: "5.9"
     MACOSX_DEPLOYMENT_TARGET: "14.0"
+    ENABLE_HARDENED_RUNTIME: true
+    CODE_SIGN_INJECT_BASE_ENTITLEMENTS: false
+    OTHER_CODE_SIGN_FLAGS: "--timestamp"
 
 targets:
   SpeedTest:
@@ -22,8 +25,11 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.speedtest.app
         INFOPLIST_FILE: SpeedTest/Info.plist
-        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_ENTITLEMENTS: SpeedTest/SpeedTest.entitlements
+        CODE_SIGN_IDENTITY: "Developer ID Application: Henry Savit (AH7XSL4UK6)"
         CODE_SIGN_STYLE: Manual
+        DEVELOPMENT_TEAM: AH7XSL4UK6
+        PROVISIONING_PROFILE_SPECIFIER: ""
         COMBINE_HIDPI_IMAGES: true
     dependencies:
       - target: SpeedTestWidget
@@ -40,8 +46,11 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.speedtest.app.widget
         INFOPLIST_FILE: SpeedTestWidget/Info.plist
-        CODE_SIGN_IDENTITY: "-"
+        CODE_SIGN_ENTITLEMENTS: SpeedTestWidget/SpeedTestWidget.entitlements
+        CODE_SIGN_IDENTITY: "Developer ID Application: Henry Savit (AH7XSL4UK6)"
         CODE_SIGN_STYLE: Manual
+        DEVELOPMENT_TEAM: AH7XSL4UK6
+        PROVISIONING_PROFILE_SPECIFIER: ""
         LD_RUNPATH_SEARCH_PATHS:
           - "$(inherited)"
           - "@executable_path/../Frameworks"
