@@ -1,7 +1,8 @@
 import './App.css'
 
 const GITHUB_REPO = 'https://github.com/hsavit1/SpeedTest'
-const DOWNLOAD_URL = `${GITHUB_REPO}/releases/latest/download/SpeedTest-v1.0.0.dmg`
+const DOWNLOAD_URL = `${GITHUB_REPO}/releases/latest/download/SpeedTest-v1.0.0.zip`
+const INSTALL_CMD = 'curl -sL https://raw.githubusercontent.com/hsavit1/SpeedTest/main/install.sh | bash'
 
 function App() {
   return (
@@ -143,17 +144,16 @@ function Features() {
 
 function HowItWorks() {
   const steps = [
-    { num: '1', title: 'Download the app', desc: 'Grab the latest release from GitHub.' },
-    { num: '2', title: 'Move to Applications', desc: 'Drag Speed Test.app into your Applications folder.' },
-    { num: '3', title: 'Add the widget', desc: 'Open Notification Center, click "Edit Widgets", and add Speed Test.' },
-    { num: '4', title: 'Tap to test', desc: 'Hit "Test Speed" anytime to measure your download speed.' },
+    { num: '1', title: 'Run the installer', desc: 'Paste the install command below into Terminal. It downloads, installs, and opens the app.' },
+    { num: '2', title: 'Add the widget', desc: 'Click the date/time in your menu bar → scroll down → "Edit Widgets" → add Speed Test.' },
+    { num: '3', title: 'Tap to test', desc: 'Hit "Test Speed" on the widget anytime to measure your download speed.' },
   ]
 
   return (
     <section className="how-it-works">
       <div className="section-inner">
         <h2>Get started in seconds</h2>
-        <p className="section-subtitle">Four steps. No account needed.</p>
+        <p className="section-subtitle">Three steps. No account needed.</p>
         <div className="steps">
           {steps.map((s) => (
             <div className="step" key={s.num}>
@@ -177,17 +177,15 @@ function Install() {
         <div className="install-card">
           <h2>Ready to test your speed?</h2>
           <p>Download the app and add the widget to your desktop in under a minute.</p>
+          <p className="install-label">Run this in Terminal:</p>
+          <code className="install-code">
+            {INSTALL_CMD}
+          </code>
           <div className="install-actions">
-            <a href={DOWNLOAD_URL} className="btn btn-primary btn-lg">
+            <a href={DOWNLOAD_URL} className="btn btn-secondary">
               <DownloadIcon />
-              Download Latest Release
+              Or download the .zip manually
             </a>
-          </div>
-          <div className="install-alt">
-            <p>Or build from source:</p>
-            <code className="install-code">
-              git clone {GITHUB_REPO}.git && cd SpeedTest && xcodegen generate && open SpeedTest.xcodeproj
-            </code>
           </div>
         </div>
       </div>

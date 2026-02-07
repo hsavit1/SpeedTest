@@ -402,8 +402,14 @@
   margin-bottom: 32px;
 }
 
+.install-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
 .install-actions {
-  margin-bottom: 32px;
+  margin-top: 24px;
 }
 
 .install-alt p {
