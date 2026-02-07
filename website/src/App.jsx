@@ -1,7 +1,7 @@
 import './App.css'
 
 const GITHUB_REPO = 'https://github.com/hsavit1/SpeedTest'
-const DOWNLOAD_URL = `${GITHUB_REPO}/releases/latest/download/SpeedTest-v1.1.0.zip`
+const DOWNLOAD_URL = `${GITHUB_REPO}/releases/latest/download/SpeedTest-v1.1.0.dmg`
 const INSTALL_CMD = 'curl -sL https://raw.githubusercontent.com/hsavit1/SpeedTest/main/install.sh | bash'
 
 function App() {
@@ -184,7 +184,7 @@ function Install() {
           <div className="install-actions">
             <a href={DOWNLOAD_URL} className="btn btn-secondary">
               <DownloadIcon />
-              Or download the .zip manually
+              Or download the .dmg manually
             </a>
           </div>
         </div>
