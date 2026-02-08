@@ -3,6 +3,7 @@ import './App.css'
 const GITHUB_REPO = 'https://github.com/hsavit1/SpeedTest'
 const DOWNLOAD_URL = `${GITHUB_REPO}/releases/latest/download/SpeedTest-v1.1.0.dmg`
 const INSTALL_CMD = 'curl -sL https://raw.githubusercontent.com/hsavit1/SpeedTest/main/install.sh | bash'
+const BREW_CMD = 'brew tap hsavit1/tap && brew install --cask speed-test'
 
 function App() {
   return (
@@ -144,7 +145,7 @@ function Features() {
 
 function HowItWorks() {
   const steps = [
-    { num: '1', title: 'Run the installer', desc: 'Paste the install command below into Terminal. It downloads, installs, and opens the app.' },
+    { num: '1', title: 'Install the app', desc: 'Use Homebrew, the curl installer, or download the DMG directly.' },
     { num: '2', title: 'Add the widget', desc: 'Click the date/time in your menu bar → scroll down → "Edit Widgets" → add Speed Test.' },
     { num: '3', title: 'Tap to test', desc: 'Hit "Test Speed" on the widget anytime to measure your download speed.' },
   ]
@@ -177,7 +178,11 @@ function Install() {
         <div className="install-card">
           <h2>Ready to test your speed?</h2>
           <p>Download the app and add the widget to your desktop in under a minute.</p>
-          <p className="install-label">Run this in Terminal:</p>
+          <p className="install-label">Install with Homebrew:</p>
+          <code className="install-code">
+            {BREW_CMD}
+          </code>
+          <p className="install-label install-or">Or run this in Terminal:</p>
           <code className="install-code">
             {INSTALL_CMD}
           </code>
