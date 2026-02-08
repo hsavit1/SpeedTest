@@ -58,4 +58,6 @@ xcodebuild -project SpeedTest.xcodeproj -scheme SpeedTest -configuration Release
 
 ## License
 
-MIT
+No Zionist License
+
+Free Palestine 🇵🇸
